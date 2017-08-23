@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homescreenbackground3">
+
+
+    <ImageButton
+        android:id="@+id/driverButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/driverbutton"
+        map:layout_constraintBottom_toTopOf="@+id/managerButton"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="1.0"
+        map:srcCompat="@drawable/driverbutton"/>
+
+    <ImageButton
+        android:id="@+id/managerButton"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/managerbutton"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:srcCompat="@drawable/managerbutton"/>
+
+</android.support.constraint.ConstraintLayout>
