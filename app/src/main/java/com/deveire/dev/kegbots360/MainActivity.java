@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Geocoder;
 import android.location.Location;
@@ -53,13 +54,21 @@ public class MainActivity extends Activity
 
     private ImageButton driverButton;
     private ImageButton managerButton;
+    private EditText ipEditText;
+    private SharedPreferences savedData;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(final Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+
+        //ipEditText = (EditText) findViewById(R.id.ipEditText);
+
+        //savedData = this.getApplicationContext().getSharedPreferences("TruckyTrack SavedData", Context.MODE_PRIVATE);
+        //String ip = savedData.getString("ServletIP", "-No Servlet IP found-");
+        //ipEditText.setText(ip);
 
         driverButton = (ImageButton) findViewById(R.id.driverButton);
         managerButton = (ImageButton) findViewById(R.id.managerButton);
@@ -69,6 +78,9 @@ public class MainActivity extends Activity
             @Override
             public void onClick(View v)
             {
+                /*SharedPreferences.Editor edit = savedData.edit();
+                edit.putString("ServletIP", ipEditText.getText().toString());
+                edit.commit();*/
                 startActivity(new Intent(getApplicationContext(), DriverActivity.class));
             }
         });
@@ -78,6 +90,9 @@ public class MainActivity extends Activity
             @Override
             public void onClick(View v)
             {
+                /*SharedPreferences.Editor edit = savedData.edit();
+                edit.putString("ServletIP", ipEditText.getText().toString());
+                edit.commit();*/
                 startActivity(new Intent(getApplicationContext(), ManagerActivity.class));
             }
         });

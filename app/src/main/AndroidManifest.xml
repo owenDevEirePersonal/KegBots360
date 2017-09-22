@@ -33,7 +33,8 @@
             android:value="@string/google_maps_key"/>
 
         <activity
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -42,11 +43,13 @@
         </activity>
         <activity
             android:name=".ManagerActivity"
-            android:label="@string/title_activity_manager">
+            android:label="@string/title_activity_manager"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DriverActivity"
-            android:label="@string/title_activity_driver">
+            android:label="@string/title_activity_driver"
+            android:screenOrientation="portrait">
         </activity>
 
     </application>

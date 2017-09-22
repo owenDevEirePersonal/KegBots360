@@ -41,4 +41,17 @@
         map:layout_constraintRight_toRightOf="parent"
         map:srcCompat="@drawable/managerbutton"/>
 
+    <!-- <EditText
+        android:id="@+id/ipEditText"
+        android:layout_width="175dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="@color/cast_expanded_controller_text_color"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintTop_toTopOf="parent"/> -->
+
 </android.support.constraint.ConstraintLayout>

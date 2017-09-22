@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
@@ -88,8 +89,10 @@ public class ManagerActivity extends FragmentActivity implements AdapterView.OnI
     private final int pingingServerFor_Nothing = 0;
 
 
-    private final String serverIPAddress = "http://192.168.1.188:8080/TruckyTrackServlet/TTServlet";
+    //private final String serverIPAddress = "http://192.168.1.188:8080/TruckyTrackServlet/TTServlet";
     //private final String serverIPAddress = "http://api.eirpin.com/api/TTServlet";
+    private final String serverIPAddress = "http://eirpin.com/kegbots360/TTServlet";
+    //private String serverIPAddress;
     private String serverURL;
     private NetworkFragment aNetworkFragment;
     //[/Network and periodic location update, Variables]
@@ -97,6 +100,8 @@ public class ManagerActivity extends FragmentActivity implements AdapterView.OnI
     //[Testing Variables]
     private ArrayList<LatLng> testStoreOfLocations;
     //[/Testing Variables]
+
+    private SharedPreferences savedData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -166,7 +171,9 @@ public class ManagerActivity extends FragmentActivity implements AdapterView.OnI
 
         locationScanInterval = 60;//in seconds
 
+        //savedData = this.getApplicationContext().getSharedPreferences("TruckyTrack SavedData", Context.MODE_PRIVATE);
 
+        //serverIPAddress = savedData.getString("ServletIP", "-No Servlet IP found-");
 
 
         restoreSavedValues(savedInstanceState);

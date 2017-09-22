@@ -163,7 +163,9 @@ public class DriverActivity extends FragmentActivity implements GoogleApiClient.
 
     private boolean pingingServer;
     //private final String serverIPAddress = "http://192.168.1.188:8080/TruckyTrackServlet/TTServlet";
-    private final String serverIPAddress = "http://api.eirpin.com/api/TTServlet";
+    //private final String serverIPAddress = "http://api.eirpin.com/api/TTServlet";
+    private final String serverIPAddress = "http://eirpin.com/kegbots360/TTServlet";
+    //private String serverIPAddress;
     private String serverURL;
     private NetworkFragment aNetworkFragment;
     //[/Network and periodic location update, Variables]
@@ -194,6 +196,8 @@ public class DriverActivity extends FragmentActivity implements GoogleApiClient.
         itemName = savedData.getString("itemName", "Unknown");
         itemID = savedData.getInt("itemID", 0);
         nameEditText.setText(itemName);
+
+        //serverIPAddress = savedData.getString("ServletIP", "-No Servlet IP found-");
 
 
         pingingServer = false;
